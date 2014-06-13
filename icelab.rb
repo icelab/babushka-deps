@@ -1,4 +1,4 @@
-dep "icelab workstation" do
+dep "workstation" do
   # Databases
   requires "postgresql.managed"
   requires "redis.managed"

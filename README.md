@@ -13,7 +13,7 @@ sh -c "`curl https://babushka.me/up`"
 Build the standard environment:
 
 ```sh
-babushka "icelab workstation"
+babushka "icelab:workstation"
 ```
 
 ## Credits

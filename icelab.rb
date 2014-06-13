@@ -27,6 +27,9 @@ dep "workstation" do
   # Global node packages
   requires "coffee-script.npm"
 
+  # Dotfiles
+  requires "dotfiles"
+
   # Services
   requires "postgresql.launchctl"
   requires "redis.launchctl"

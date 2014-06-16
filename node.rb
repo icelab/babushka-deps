@@ -1,4 +1,4 @@
-dep "nodenv", template: "managed"
+dep "nodenv", :template => "managed"
 
 meta :nodenv do
   accepts_value_for :version, :basename
@@ -18,7 +18,7 @@ end
 
 dep "v0.10.28.nodenv"
 
-dep "set nodenv global version", template: "task" do
+dep "set nodenv global version", :template => "task" do
   run {
     shell "nodenv global v0.10.28"
   }

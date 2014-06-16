@@ -1,8 +1,8 @@
-dep "icelab dotfiles", template: "src" do
+dep "icelab dotfiles", :template => "src" do
   requires "rcm.managed"
-  requires "repository".with  path: "~/.dotfiles-icelab",
-                              url: "https://github.com/icelab/dotfiles.git",
-                              branch: "master"
+  requires "repository".with  :path => "~/.dotfiles-icelab",
+                              :url => "https://github.com/icelab/dotfiles.git",
+                              :branch => "master"
 
   met? {
     "~/.dotfiles-icelab".p.exists?
@@ -13,7 +13,7 @@ dep "icelab dotfiles", template: "src" do
   }
 end
 
-dep "dotfiles", template: "task" do
+dep "dotfiles", :template => "task" do
   requires "icelab dotfiles"
 
   run {

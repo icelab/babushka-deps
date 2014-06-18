@@ -1,4 +1,4 @@
-dep "icelab dotfiles", :template => "src" do
+dep "icelab dotfiles" do
   requires "rcm.managed"
   requires "repository".with  :path => "~/.dotfiles-icelab",
                               :url => "https://github.com/icelab/dotfiles.git",

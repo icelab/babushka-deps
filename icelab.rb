@@ -14,8 +14,6 @@ dep "workstation" do
   # Ruby
   requires "ruby 2.1.2"
   requires "set rbenv global version"
-  # requires "rubygems system up to date"
-  requires "bundler.gem"
 
   # Global gems
   requires "git-smart.gem"

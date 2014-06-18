@@ -16,6 +16,8 @@ meta :rbenv do
 
     meet {
       log_shell "Installing ruby #{version}", "rbenv install #{version}"
+      log_shell "Updating rubygems",  "RBENV_VERSION=#{version} gem update --system"
+      log_shell "Installing bundler", "RBENV_VERSION=#{version} gem install bundler"
     }
   }
 
@@ -39,10 +41,4 @@ dep "bundler.gem" do
   # fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
   # number_of_cores=$(sysctl -n hw.ncpu)
   # bundle config --global jobs $((number_of_cores - 1))
-end
-
-dep "rubygems system up to date", :template => "task" do
-  run {
-    shell "gem update --system"
-  }
 end

@@ -18,9 +18,13 @@ meta :rbenv do
       log_shell "Installing ruby #{version}", "rbenv install #{version}"
     }
   }
+
+  # TODO: this should install the bundler gem for the ruby too
 end
 
-dep "2.1.2.rbenv"
+dep "ruby 2.1.2", template: "rbenv" do
+  version "2.1.2"
+end
 
 dep "set rbenv global version", :template => "task" do
   run {

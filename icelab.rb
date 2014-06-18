@@ -12,7 +12,7 @@ dep "workstation" do
   requires "phantomjs.managed"
 
   # Ruby
-  requires "2.1.2.rbenv"
+  requires "ruby 2.1.2"
   requires "set rbenv global version"
   # requires "rubygems system up to date"
   requires "bundler.gem"

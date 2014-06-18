@@ -28,6 +28,9 @@ dep "workstation" do
   # Global node packages
   requires "coffee-script.npm"
 
+  # Shell
+  requires "shell".with :shell_name => "zsh"
+
   # Dotfiles
   requires "dotfiles"
 

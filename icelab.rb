@@ -32,6 +32,9 @@ dep "workstation" do
   # Dotfiles
   requires "dotfiles"
 
+  # Projects source
+  requires "projects"
+
   # Services
   requires "elasticsearch.launchctl"
   requires "mysql.launchctl"

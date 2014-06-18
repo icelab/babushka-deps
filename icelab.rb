@@ -1,11 +1,11 @@
 dep "workstation" do
   # Databases
+  requires "elasticsearch.managed"
   requires "mysql.managed"
   requires "postgresql.managed"
   requires "redis.managed"
 
   # General homebrew packages
-  requires "elasticsearch.managed"
   requires "imagemagick.managed"
   requires "watch.managed"
   requires "heroku-toolbelt.managed"
@@ -32,8 +32,8 @@ dep "workstation" do
   requires "dotfiles"
 
   # Services
+  requires "elasticsearch.launchctl"
   requires "mysql.launchctl"
   requires "postgresql.launchctl"
   requires "redis.launchctl"
-  requires "elasticsearch.launchctl"
 end

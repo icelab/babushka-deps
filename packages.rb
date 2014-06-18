@@ -1,5 +1,8 @@
 # Managed services
 
+dep "elasticsearch.managed"
+dep "elasticsearch.launchctl"
+
 dep "mysql.managed"
 dep "mysql.launchctl"
 
@@ -7,9 +10,6 @@ dep "postgresql.managed" do
   provides "psql"
 end
 dep "postgresql.launchctl"
-
-dep "elasticsearch.managed"
-dep "elasticsearch.launchctl"
 
 dep "redis.managed" do
   provides %w(redis-cli redis-server)

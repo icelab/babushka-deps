@@ -28,9 +28,15 @@ dep "ruby 2.1.2", template: "rbenv" do
   version "2.1.2"
 end
 
-dep "set rbenv global version", :template => "task" do
-  run {
-    shell "rbenv global 2.1.2"
+dep "global ruby version", :version do
+  requires "rbenv"
+
+  met? {
+    shell("rbenv global") == version
+  }
+
+  meet {
+    shell "rbenv global #{version}"
   }
 end
 

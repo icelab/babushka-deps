@@ -13,7 +13,7 @@ dep "workstation" do
 
   # Ruby
   requires "ruby 2.1.2"
-  requires "set rbenv global version"
+  requires "global ruby version".with "2.1.2"
 
   # Global gems
   requires "git-smart.gem"

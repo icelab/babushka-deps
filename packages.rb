@@ -1,5 +1,8 @@
 # Managed services
 
+dep "mysql.managed"
+dep "mysql.launchctl"
+
 dep "postgresql.managed" do
   provides "psql"
 end

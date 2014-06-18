@@ -1,5 +1,6 @@
 dep "workstation" do
   # Databases
+  requires "mysql.managed"
   requires "postgresql.managed"
   requires "redis.managed"
 
@@ -31,6 +32,7 @@ dep "workstation" do
   requires "dotfiles"
 
   # Services
+  requires "mysql.launchctl"
   requires "postgresql.launchctl"
   requires "redis.launchctl"
   requires "elasticsearch.launchctl"

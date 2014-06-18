@@ -41,7 +41,7 @@ meta :project do
   template {
     # Wrap requires in setup block, when parameters are available
     setup {
-      requires "repository".with({
+      requires "icelab:repository".with({
         :path => path,
         :url => url,
         :branch => branch,

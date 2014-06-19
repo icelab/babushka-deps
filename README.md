@@ -7,7 +7,7 @@
 Install babushka:
 
 ```sh
-sh -c "`curl https://babushka.me/up`"
+BABUSHKA_REPO=https://github.com/timriley/babushka.git sh -c "`curl https://babushka.me/up`"
 ```
 
 Build the standard environment:

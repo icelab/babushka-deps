@@ -3,6 +3,9 @@
 dep "elasticsearch.managed"
 dep "elasticsearch.launchctl"
 
+dep "memcached.managed"
+dep "memcached.launchctl"
+
 dep "mysql.managed"
 dep "mysql.launchctl"
 

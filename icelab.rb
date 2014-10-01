@@ -1,9 +1,19 @@
 dep "workstation" do
   # Databases
   requires "elasticsearch.managed"
+  requires "elasticsearch.launchctl"
+
+  requires "memcached.managed"
+  requires "memcached.launchctl"
+
   requires "mysql.managed"
+  requires "mysql.launchctl"
+
   requires "postgresql.managed"
+  requires "postgresql.launchctl"
+
   requires "redis.managed"
+  requires "redis.launchctl"
 
   # General homebrew packages
   requires "imagemagick.managed"
@@ -34,10 +44,4 @@ dep "workstation" do
 
   # Projects source
   requires "projects"
-
-  # Services
-  requires "elasticsearch.launchctl"
-  requires "mysql.launchctl"
-  requires "postgresql.launchctl"
-  requires "redis.launchctl"
 end

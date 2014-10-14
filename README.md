@@ -16,7 +16,7 @@ If you're running this for the very first time, first prepare the environment:
 babushka "icelab:workstation bootstrapped"
 ```
 
-Then afterwards, finish installing the environment:
+Then afterwards, _**open a new shell**_ and then finish installing the environment:
 
 ```sh
 babushka "icelab:workstation"

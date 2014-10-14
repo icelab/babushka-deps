@@ -20,8 +20,6 @@ meta :rbenv do
       log_shell "Installing bundler", "RBENV_VERSION=#{version} gem install bundler"
     }
   }
-
-  # TODO: this should install the bundler gem for the ruby too
 end
 
 dep "ruby 2.1.2", template: "rbenv" do
@@ -38,13 +36,4 @@ dep "global ruby version", :version do
   meet {
     shell "rbenv global #{version}"
   }
-end
-
-dep "bundler.gem" do
-  provides "bundle"
-
-  # TODO: support configuration for default multi-core bundler
-  # fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
-  # number_of_cores=$(sysctl -n hw.ncpu)
-  # bundle config --global jobs $((number_of_cores - 1))
 end

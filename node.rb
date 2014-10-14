@@ -24,12 +24,22 @@ meta :nodenv do
   }
 end
 
-dep "0.10.32.nodenv"
+dep "node 0.10.32", :template => "nodenv" do
+  version "0.10.32"
+end
 
-dep "set nodenv global version", :template => "task" do
-  run {
-    shell "nodenv global 0.10.32"
+dep "global node version", :version do
+  requires "nodenv"
+
+  met? {
+    shell("nodenv global") == version
+  }
+
+  meet {
+    shell "nodenv global #{version}"
   }
 end
 
-dep "coffee-script.npm"
+dep "coffee-script.npm" do
+  provides "coffee"
+end

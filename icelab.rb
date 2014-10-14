@@ -1,4 +1,20 @@
+dep "workstation environment" do
+  # rbenv
+  requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build"
+
+  # nodenv
+  requires "nodenv"
+
+  # Dotfiles
+  requires "dotfiles"
+
+  # Shell
+  requires "shell".with :shell_name => "zsh"
+end
+
 dep "workstation" do
+  requires "workstation environment"
+
   # Databases
   requires "elasticsearch.managed"
   requires "elasticsearch.launchctl"
@@ -35,12 +51,6 @@ dep "workstation" do
 
   # Global node packages
   requires "coffee-script.npm"
-
-  # Shell
-  requires "shell".with :shell_name => "zsh"
-
-  # Dotfiles
-  requires "dotfiles"
 
   # Projects source
   requires "projects"

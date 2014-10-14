@@ -10,11 +10,19 @@ Install babushka:
 sh -c "`curl https://babushka.me/up`"
 ```
 
-Build the standard environment:
+If you're running this for the very first time, first prepare the environment:
+
+```sh
+babushka "icelab:workstation environment"
+```
+
+Then afterwards, finish installing the environment:
 
 ```sh
 babushka "icelab:workstation"
 ```
+
+This command is all you'll need to run for any subsequent updates.
 
 ## Credits
 

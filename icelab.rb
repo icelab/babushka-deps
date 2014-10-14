@@ -46,7 +46,7 @@ dep "workstation" do
   requires "raygun.gem"
 
   # Node
-  requires "v0.10.28.nodenv"
+  requires "0.10.32.nodenv"
   requires "set nodenv global version"
 
   # Global node packages

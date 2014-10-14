@@ -13,7 +13,7 @@ sh -c "`curl https://babushka.me/up`"
 If you're running this for the very first time, first prepare the environment:
 
 ```sh
-babushka "icelab:workstation environment"
+babushka "icelab:workstation bootstrapped"
 ```
 
 Then afterwards, finish installing the environment:

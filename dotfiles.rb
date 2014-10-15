@@ -5,7 +5,8 @@ dep "icelab dotfiles" do
                               :branch => "master"
 
   met? {
-    "~/.dotfiles-icelab".p.exists?
+    # Require that the dotfiles repository is checked out _and_ installed (by checking just one dotfile)
+    "~/.dotfiles-icelab".p.exists? && (zshrc = "~/.zshrc".p).symlink? && zshrc.readlink == "~/.dotfiles-icelab/zshrc".p
   }
 
   after {

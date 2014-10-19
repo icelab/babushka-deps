@@ -23,3 +23,11 @@ dep "homebrew tap", :tap_name do
     end
   }
 end
+
+# Bring back the `homebrew services` subcommand. See
+# https://github.com/Homebrew/homebrew/issues/28657 for notes on its removal
+# from core. We may need to track this for a little while in case the
+# continued development moves elsewhere.
+dep "homebrew services" do
+  requires "homebrew tap".with "gapple/services"
+end

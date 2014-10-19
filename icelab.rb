@@ -34,6 +34,8 @@ end
 dep "workstation" do
   requires "workstation bootstrapped"
 
+  requires "homebrew services"
+
   # Databases
   requires "elasticsearch.managed"
   requires "elasticsearch.launchctl"

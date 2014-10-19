@@ -72,6 +72,6 @@ dep "workstation" do
   # Global node packages
   requires "coffee-script.npm"
 
-  # Projects source
+  # Projects babushka source
   requires "projects"
 end

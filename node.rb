@@ -40,6 +40,4 @@ dep "global node version", :version do
   }
 end
 
-dep "coffee-script.npm" do
-  provides "coffee"
-end
+dep "coffee-script.npm"

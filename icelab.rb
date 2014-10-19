@@ -12,13 +12,12 @@ dep "workstation bootstrapped" do
   # And set the shell to zsh, so this config can take effect
   requires "shell".with :shell_name => "zsh"
 
-  met? {
+  after {
     message = word_wrap("The environment is bootstrapped. If this is your first installation, open a new shell and run \"babushka icelab:workstation\" to continue.")
 
-    log "❄︎"*80, :as => :warning
-    log message, :as => :warning
-    log "❄︎"*79 + "☃", :as => :warning
-    true
+    log "❄︎"*80,        :as => :warning
+    log message,       :as => :warning
+    log "❄︎"*79 + "☃",  :as => :warning
   }
 
   # Thanks, ActionView

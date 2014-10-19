@@ -31,7 +31,7 @@ meta :rbenv do
   }
 end
 
-dep "ruby 2.1.2", template: "rbenv" do
+dep "ruby 2.1.2", :template => "rbenv" do
   version "2.1.2"
 end
 

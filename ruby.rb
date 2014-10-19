@@ -7,6 +7,15 @@ dep "ruby-build", :template => "managed"
 meta :rbenv do
   accepts_value_for :version, :basename
 
+  # In Yosemite, once gcc-4.2 is installed (needed for older rubies), MRI's
+  # build scripts use it in preference to the default `gcc` binary, which
+  # actually causes the builds to break. Specifying the standard gcc here
+  # fixes this. See https://github.com/sstephenson/ruby-build/issues/651.
+  #
+  # TODO: it might be nice to have some sort of "dynamic" dependency here that
+  # knows which version of GCC to use for which version of ruby.
+  accepts_value_for :build_env_vars, "CC=/usr/bin/gcc"
+
   template {
     requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build"
 
@@ -15,7 +24,7 @@ meta :rbenv do
     }
 
     meet {
-      log_shell "Installing ruby #{version}", "rbenv install #{version}"
+      log_shell "Installing ruby #{version}", "#{build_env_vars} rbenv install #{version}"
       log_shell "Updating rubygems",  "RBENV_VERSION=#{version} gem update --system"
       log_shell "Installing bundler", "RBENV_VERSION=#{version} gem install bundler"
     }

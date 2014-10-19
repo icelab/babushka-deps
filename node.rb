@@ -21,6 +21,10 @@ meta :nodenv do
     meet {
       log_shell "Installing node #{version}", "nodenv install #{version}"
     }
+
+    after {
+      log_shell "nodenv rehash", "nodenv rehash"
+    }
   }
 end
 
@@ -37,6 +41,10 @@ dep "global node version", :version do
 
   meet {
     shell "nodenv global #{version}"
+  }
+
+  after {
+    log_shell "nodenv rehash", "nodenv rehash"
   }
 end
 

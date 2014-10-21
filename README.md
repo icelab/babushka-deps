@@ -114,7 +114,7 @@ First, make sure you have a space for your personal babushka source:
 mkdir -p ~/.babushka/deps
 ```
 
-Then create a dep that requires icelab:workstation, along with any other peronal deps that you'd like to use, e.g. in '~/.babushka/deps/laptop.rb':
+Then create a dep that requires icelab:workstation, along with any other personal deps that you'd like to use, e.g. in '~/.babushka/deps/laptop.rb':
 
 ```ruby
 dep "laptop" do

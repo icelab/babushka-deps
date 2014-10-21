@@ -29,20 +29,23 @@ dep "imagemagick.managed" do
   provides %w(compare animate convert composite conjure import identify stream display montage mogrify)
 end
 
-dep "phantomjs.managed" do
-  # Ensure we're installing the "2.0.0 (development)" version from HEAD, which
-  # is necessary for Yosemite.
-  provides "phantomjs ~> 2.0.0"
+dep "phantomjs" do
+  met? {
+    in_path? "phantomjs"
+  }
 
   meet {
-    # This can be changed once homebrew has the 2.0.0 package proper
-    log_shell "Installing phantomjs from HEAD", "brew install --HEAD phantomjs"
+    Babushka::Resource.extract "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-macosx.zip" do |archive|
+      shell "cp bin/phantomjs /usr/local/bin"
+    end
   }
 end
+
 dep "rcm.managed" do
   requires "homebrew tap".with "thoughtbot/formulae"
   provides "rcup"
 end
+
 dep "watch.managed"
 
 # Gems

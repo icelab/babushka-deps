@@ -5,6 +5,7 @@
 ## Prerequisites
 
 * Mac OS X (10.9 Mavericks or 10.10 Yosemite)
+* Latest available version of Xcode
 * [Java](https://www.java.com/en/download/help/mac_install.xml)
 
 ## Install

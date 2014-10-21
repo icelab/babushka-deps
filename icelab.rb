@@ -59,8 +59,8 @@ dep "workstation" do
   requires "phantomjs"
 
   # Ruby
-  requires "ruby 2.1.2"
-  requires "global ruby version".with "2.1.2"
+  requires "ruby 2.1.3"
+  requires "global ruby version".with "2.1.3"
 
   # Global gems
   requires "git-smart.gem"

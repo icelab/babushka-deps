@@ -1,10 +1,39 @@
 # Preparing an existing system
 
-The easiest way to make sure your system accepts the development environment is to remove your existing Homebrew and version manager installations.
+The easiest way to make sure your system accepts the development environment is to prepare a clean slate.
+
+Before you follow any of these instructions, _understand what they are doing_. They will remove things from your system. If there is anything that you want to record about the state of your system (e.g. a list of installed Homebrew packages or Ruby gems), do this now.
+
+## Move aside conflicting dotfiles
+
+Some [shared dotfiles](https://github.com/icelab/dotfiles) will be installed. Move yours aside to let these come into place.
+
+```sh
+shared_dotfiles=(aliases gemrc gitconfig gitignore gitmessage psqlrc rcrc rspec zsh zshenv zshrc)
+
+for dotfile in ${shared_dotfiles[*]}; do
+  if [ -e ~/.${dotfile} ]; then
+    echo "Moving ~/.$dotfile to ~/.$dotfile.pre-icelab-babushka-deps"
+    mv ~/.${dotfile} ~/.${dotfile}.pre-icelab-babushka-deps
+  fi
+done
+```
+
+Once the development environment is installed, you can learn how to [extend, customize or even replace these dotfiles](https://github.com/icelab/dotfiles).
+
+You should do at least one other thing before installing the new environment: create a `~/.gitconfig.local` file with your personal name and email address for git commits, e.g.
+
+```
+[user]
+  name = Your Name
+  email = your@email.com
+```
+
+This file will get automatically picked up and used by the new dotfiles that are installed.
 
 ## Uninstall rbenv and nodenv
 
-These exist in your home directory.
+These version managers are installed into your home directory. Remove any you might already have in place.
 
 ```sh
 rm -rf ~/.rbenv

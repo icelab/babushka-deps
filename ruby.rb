@@ -31,10 +31,6 @@ meta :rbenv do
   }
 end
 
-dep "ruby 2.1.2", :template => "rbenv" do
-  version "2.1.2"
-end
-
 dep "global ruby version", :version do
   requires "rbenv"
 
@@ -45,4 +41,12 @@ dep "global ruby version", :version do
   meet {
     shell "rbenv global #{version}"
   }
+end
+
+dep "ruby 1.9.3-p448", :template => "rbenv" do
+  version "1.9.3-p448"
+end
+
+dep "ruby 2.1.2", :template => "rbenv" do
+  version "2.1.2"
 end

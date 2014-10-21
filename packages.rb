@@ -1,8 +1,5 @@
 # Managed services
 
-dep "elasticsearch.managed"
-dep "elasticsearch.launchctl"
-
 dep "memcached.managed"
 dep "memcached.launchctl"
 

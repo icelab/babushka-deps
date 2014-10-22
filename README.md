@@ -12,7 +12,7 @@
 
 ### First time
 
-First, [prepare your system](docs/preparing-your-system.md). You must follow these steps if you have an existing Homebrew installation, Ruby or Node.js version managers, or custom dotfiles in your home directory.
+First, [prepare your system](docs/preparing-your-system.md). You must follow these steps if you have an existing Homebrew installation, Ruby or Node.js version managers, or custom dotfiles in your home directory. **After you've done this, open a new shell.**
 
 Install Babushka:
 

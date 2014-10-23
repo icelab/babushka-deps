@@ -2,11 +2,10 @@
 
 [Babushka](http://babushka.me) deps for building the standard Icelab Mac OS X development environment.
 
-## Prerequisites
+## Requirements
 
 * [OS X](http://www.apple.com/osx/) (10.9 Mavericks or 10.10 Yosemite)
 * Latest available version of [Xcode](https://developer.apple.com/xcode/)
-* [Java](https://www.java.com/en/download/help/mac_install.xml)
 
 ## Install
 

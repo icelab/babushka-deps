@@ -7,9 +7,6 @@ dep "postgres fixed for yosemite" do
 
   meet {
     shell "mkdir -p /usr/local/var/postgres/{pg_tblspc,pg_twophase,pg_stat_tmp} && touch /usr/local/var/postgres/{pg_tblspc,pg_twophase,pg_stat_tmp}/.keep"
-  }
-
-  after {
-    shell "brew services restart postgresql"
+    shell "brew services stop postgresql; sleep 2; brew services start postgresql"
   }
 end

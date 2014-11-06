@@ -2,7 +2,7 @@
 # Yosemite. We no longer need to download it directly.
 dep "direct phantomjs binary download removed" do
   met? {
-    Babushka.host.pkg_helper.has?("phantomjs") && "/usr/local/bin/phantomjs".p.exists?
+    Babushka.host.pkg_helper.has?("phantomjs") || !"/usr/local/bin/phantomjs".p.exists?
   }
 
   meet {

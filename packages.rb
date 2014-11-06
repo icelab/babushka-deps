@@ -31,16 +31,8 @@ dep "imagemagick.managed" do
   provides %w(compare animate convert composite conjure import identify stream display montage mogrify)
 end
 
-dep "phantomjs" do
-  met? {
-    in_path? "phantomjs"
-  }
-
-  meet {
-    Babushka::Resource.extract "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-macosx.zip" do |archive|
-      shell "cp bin/phantomjs /usr/local/bin"
-    end
-  }
+dep "phantomjs.managed" do
+  requires "direct phantomjs binary download removed"
 end
 
 dep "rcm.managed" do

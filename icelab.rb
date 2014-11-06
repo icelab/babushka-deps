@@ -52,7 +52,7 @@ dep "workstation" do
   requires "imagemagick.managed"
   requires "watch.managed"
   requires "heroku-toolbelt.managed"
-  requires "phantomjs"
+  requires "phantomjs.managed"
 
   # Ruby
   requires "ruby 2.1.3"

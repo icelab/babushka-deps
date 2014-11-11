@@ -4,6 +4,12 @@ dep "rbenv-gem-rehash", :template => "managed" do
 end
 dep "ruby-build", :template => "managed"
 
+dep "ruby-build upgraded", :template => "task" do
+  run {
+    shell "brew upgrade ruby-build 2>/dev/null || true"
+  }
+end
+
 meta :rbenv do
   accepts_value_for :version, :basename
 
@@ -17,7 +23,7 @@ meta :rbenv do
   accepts_value_for :build_env_vars, "CC=/usr/bin/gcc"
 
   template {
-    requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build"
+    requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build", "icelab:ruby-build upgraded"
 
     met? {
       shell("rbenv versions")[/#{version}\b/]

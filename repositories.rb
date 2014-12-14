@@ -12,6 +12,16 @@ dep 'repository', :path, :url, :branch, :template => 'repo' do
            'up-to-date.repo'.with(path)
 end
 
+dep "safe local bin path for repository", :path do
+  met? {
+    "#{path}/.git/safe".p.exists?
+  }
+
+  meet {
+    shell "mkdir #{path}/.git/safe"
+  }
+end
+
 # This meta-dep is more like helpful mixins for Git repositories
 meta :repo do
   # Retrieves the GitRepo for the dep

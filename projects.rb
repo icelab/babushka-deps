@@ -50,6 +50,10 @@ meta :project do
         :url => url,
         :branch => branch,
       })
+
+      requires "icelab:safe local bin path for repository".with({
+        :path => path
+      })
     }
 
     # Gets the Git repository for the project

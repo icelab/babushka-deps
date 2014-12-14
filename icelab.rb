@@ -38,8 +38,7 @@ dep "workstation" do
   requires "memcached.managed"
   requires "memcached.launchctl"
 
-  requires "mysql.managed"
-  requires "mysql.launchctl"
+  requires "mysql"
 
   requires "postgresql.managed"
   requires "postgresql.launchctl"

@@ -63,8 +63,8 @@ dep "workstation" do
   requires "raygun.gem"
 
   # Node
-  requires "node 0.10.32"
-  requires "global node version".with "0.10.32"
+  requires "node 0.10.33"
+  requires "global node version".with "0.10.33"
 
   # Global node packages
   requires "coffee-script.npm"

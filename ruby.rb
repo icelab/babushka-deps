@@ -73,6 +73,10 @@ dep "ruby 1.9.3-p448", :template => "rbenv" do
   version "1.9.3-p448"
 end
 
+dep "1.9.3-p551", :template => "rbenv" do
+  version "1.9.3-p551"
+end
+
 dep "ruby 2.0.0-p576", :template => "rbenv" do
   version "2.0.0-p576"
 end
@@ -95,4 +99,8 @@ end
 
 dep "ruby 2.1.5", :template => "rbenv" do
   version "2.1.5"
+end
+
+dep "ruby 2.2.1", :template => "rbenv" do
+  version "2.2.1"
 end

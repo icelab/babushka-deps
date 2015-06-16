@@ -6,10 +6,6 @@ end
 dep "buildkite-agent.managed", :buildkite_token do
   requires "homebrew tap".with "buildkite/buildkite"
 
-  met? {
-    shell("brew list").include?("buildkite-agent")
-  }
-
   meet {
     shell("brew install --devel --token='#{buildkite_token}' buildkite-agent")
   }

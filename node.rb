@@ -15,7 +15,7 @@ meta :nodenv do
     requires "nodenv"
 
     met? {
-      shell("nodenv versions")[/#{version}\b/]
+      shell("nodenv versions || true")[/#{version}\b/]
     }
 
     meet {

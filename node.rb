@@ -12,7 +12,7 @@ meta :nodenv do
   accepts_value_for :version, :basename
 
   template {
-    requires "nodenv"
+    requires "icelab:nodenv"
 
     met? {
       shell("nodenv versions || true")[/#{version}\b/]

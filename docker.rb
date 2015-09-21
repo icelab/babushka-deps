@@ -3,7 +3,7 @@ dep "docker" do
   requires "docker-compose.managed"
 end
 
-dep "dinghy.managed" do
+dep "dinghy" do
   met? {
     in_path?("dinghy")
   }
@@ -12,7 +12,7 @@ dep "dinghy.managed" do
     log "Installing dinghy via brew" do
       shell(
         "brew install dinghy --HEAD https://github.com/codekitchen/dinghy/raw/latest/dinghy.rb",
-        :sudo => pkg_manager.should_sudo?,
+        :sudo => Babushka::BrewHelper.should_sudo?,
         :log => true,
         :closing_status => :status_only
       )
@@ -22,7 +22,7 @@ end
 
 dep "dinghy setup" do
   requires "virtualbox"
-  requires "dinghy.managed"
+  requires "dinghy"
 
   met? {
     vm_status = shell("dinghy status").split("\n").val_for("VM")

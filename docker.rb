@@ -5,7 +5,7 @@ end
 
 dep "dinghy.managed" do
   met? {
-    pkg_manager.has?("dinghy") && in_path?("dinghy")
+    in_path?("dinghy")
   }
 
   meet {

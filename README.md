@@ -103,6 +103,26 @@ Activating the development environment for a project does the following:
 1. Checks the project out into `~/src/<project_name>`
 2. If specified, the project's own Babushka dep is run, making whatever changes are necessary to enable development on the project. This dep will be available in the `babushka-deps/` directory at the top-level of the project's codebase.
 
+## Enable experimental features
+
+These deps ship with a few experimental features not yet part of the standard workstation environment.
+
+### Buildkite agent
+
+Run the agent for [Buildkite](https://buildkite.com) builds on your machine:
+
+```
+babushka "icelab:buildkite-agent"
+```
+
+### Docker on OS X, via Dinghy
+
+Run apps on your machine using [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/).
+
+```
+babushka "icelab:docker"
+```
+
 ## Customize your environment with Babushka
 
 If you want to automate your personal system customizations, you can write your own Babushka deps and have them work alongside these ones.

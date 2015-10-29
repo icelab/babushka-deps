@@ -34,7 +34,4 @@ dep "dinghy setup" do
   }
 end
 
-dep "docker-compose.managed" do
-  installs "fig"
-  provides "docker-compose"
-end
+dep "docker-compose.managed"

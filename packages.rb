@@ -46,6 +46,11 @@ dep "redis.managed" do
 end
 dep "redis.launchctl"
 
+dep "elasticsearch.managed" do
+  provides "elasticsearch"
+end
+dep "elasticsearch.launchctl"
+
 # Managed packages
 
 dep "apple-gcc42.managed" do # For building older rubies

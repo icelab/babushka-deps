@@ -36,6 +36,10 @@ dep "node 0.10.33", :template => "nodenv" do
   version "0.10.33"
 end
 
+dep "node 0.12.4", :template => "nodenv" do
+  version "0.12.4"
+end
+
 dep "global node version", :version do
   requires "nodenv"
 

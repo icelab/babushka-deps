@@ -51,7 +51,7 @@ dep "workstation" do
   requires "imagemagick.managed"
   requires "watch.managed"
   requires "heroku-toolbelt.managed"
-  requires "phantomjs.managed"
+  # requires "phantomjs.managed"
 
   # Ruby
   requires "ruby 2.2.3"
@@ -67,6 +67,7 @@ dep "workstation" do
 
   # Global node packages
   requires "coffee-script.npm"
+  requires "phantomjs.npm" # temporary fix until phantomjs in brew works again
 
   # Projects babushka source
   requires "projects"

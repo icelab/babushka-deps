@@ -66,7 +66,10 @@ dep "imagemagick.managed" do
   provides %w(compare animate convert composite conjure import identify stream display montage mogrify)
 end
 
-dep "phantomjs.managed" do
+# Temporarily provide PhantomJS via an NPM package until the homebrew
+# version works with El Capitan
+# dep "phantomjs.managed" do
+dep "phantomjs.npm" do
   requires "direct phantomjs binary download removed"
 end
 

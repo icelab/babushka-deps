@@ -68,7 +68,4 @@ dep "workstation" do
   # Global node packages
   requires "coffee-script.npm"
   requires "phantomjs.npm" # temporary fix until phantomjs in brew works again
-
-  # Projects babushka source
-  requires "projects"
 end

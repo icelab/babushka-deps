@@ -40,6 +40,12 @@ After this has completed, _**open a new shell**_ and then finish applying the re
 babushka "icelab:workstation"
 ```
 
+Finally, enable our private dep source for cloning and setting up Icelab projects (you can skip this if you're a public user these Babuhska deps):
+
+```sh
+babushka "icelab:projects"
+```
+
 ### Updates
 
 To update your environment, first update the Babushka sources:

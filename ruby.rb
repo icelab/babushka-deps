@@ -1,7 +1,5 @@
 dep "rbenv", :template => "managed"
-dep "rbenv-gem-rehash", :template => "managed" do
-  provides []
-end
+
 dep "ruby-build", :template => "managed"
 
 dep "ruby-build upgraded", :template => "task" do

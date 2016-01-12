@@ -2,7 +2,7 @@
 # environment for the rest of the deps to run.
 dep "workstation bootstrapped" do
   # Install the version managers
-  requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build"
+  requires "icelab:rbenv", "icelab:ruby-build"
   requires "nodenv"
 
   # Bring in the Icelab dotfiles, which includes zsh config to initialize the

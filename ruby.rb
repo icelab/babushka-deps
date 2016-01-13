@@ -21,7 +21,7 @@ meta :rbenv do
   accepts_value_for :build_env_vars, "CC=/usr/bin/gcc"
 
   template {
-    requires "icelab:rbenv", "icelab:rbenv-gem-rehash", "icelab:ruby-build", "icelab:ruby-build upgraded"
+    requires "icelab:rbenv", "icelab:ruby-build", "icelab:ruby-build upgraded"
 
     met? {
       shell("rbenv versions")[/#{version}\b/]

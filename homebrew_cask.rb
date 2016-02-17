@@ -1,6 +1,5 @@
-dep "homebrew cask", :template => "lib" do
+dep "homebrew cask" do
   requires "icelab:homebrew tap".with "caskroom/cask"
-  installs "brew-cask"
 end
 
 meta :cask do

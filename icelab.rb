@@ -15,9 +15,9 @@ dep "workstation bootstrapped" do
   after {
     message = word_wrap("The environment is bootstrapped. If this is your first installation, open a new shell and run \"babushka icelab:workstation\" to continue.")
 
-    log "❄"*80,        :as => :warning
+    log "*"*80,        :as => :warning
     log message,       :as => :warning
-    log "❄"*79 + "☃",  :as => :warning
+    log "*"*79 + "!",  :as => :warning
   }
 
   # Thanks, ActionView

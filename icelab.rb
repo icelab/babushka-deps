@@ -50,7 +50,7 @@ dep "workstation" do
   # General homebrew packages
   requires "imagemagick.managed"
   requires "watch.managed"
-  requires "heroku-toolbelt.managed"
+  requires "heroku.managed"
   requires "phantomjs.managed"
 
   # Ruby

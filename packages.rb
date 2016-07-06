@@ -58,7 +58,7 @@ dep "apple-gcc42.managed" do # For building older rubies
   provides "gcc-4.2"
 end
 
-dep "heroku-toolbelt.managed" do
+dep "heroku.managed" do
   provides "heroku"
 end
 

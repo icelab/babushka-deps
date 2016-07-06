@@ -63,7 +63,9 @@ dep "workstation" do
 
   # Node
   requires "node 0.10.33"
-  requires "global node version".with "0.10.33"
+  requires "node 4.4.7"
+  requires "node 6.2.2"
+  requires "global node version".with "4.4.7"
 
   # Global node packages
   requires "coffee-script.npm"

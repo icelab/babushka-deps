@@ -28,20 +28,16 @@ meta :nodenv do
   }
 end
 
-dep "node 0.10.32", :template => "nodenv" do
-  version "0.10.32"
-end
-
 dep "node 0.10.33", :template => "nodenv" do
   version "0.10.33"
 end
 
-dep "node 0.12.4", :template => "nodenv" do
-  version "0.12.4"
+dep "node 4.4.7", :template => "nodenv" do
+  version "4.4.7"
 end
 
-dep "node 4.2.1", :template => "nodenv" do
-  version "4.2.1"
+dep "node 6.2.2", :template => "nodenv" do
+  version "6.2.2"
 end
 
 dep "global node version", :version do

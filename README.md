@@ -16,7 +16,8 @@ First, [prepare your system](docs/preparing-your-system.md). You must follow the
 Install Babushka:
 
 ```sh
-sudo sh -c "`curl https://babushka.me/up`"
+BABUSHKA_REPO=https://github.com/icelab/babushka.git \
+sh -c "`curl https://babushka.me/up`"
 ```
 
 You'll be asked where to install Babushka. Accept the default value of `/usr/local/babushka`.

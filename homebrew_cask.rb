@@ -45,7 +45,7 @@ class CaskHelper < Babushka::BrewHelper
     #
     # TODO: make this determine the real caskroom
     def caskroom
-      "/opt/homebrew-cask/Caskroom".p
+      "/usr/local/Caskroom".p
     end
 
     # Don't require sudo when running homebrew cask.

@@ -4,14 +4,14 @@
 
 ## Requirements
 
-* [OS X](http://www.apple.com/osx/) (10.9 Mavericks or 10.10 Yosemite)
+* [macOS](http://www.apple.com/macos/sierra/) (10.12 Sierra or 10.11 El Capitan)
 * Latest available version of [Xcode](https://developer.apple.com/xcode/)
 
 ## Install
 
 ### First time
 
-First, [prepare your system](docs/preparing-your-system.md). You must follow these steps if you have an existing Homebrew installation, Ruby or Node.js version managers, or custom dotfiles in your home directory. **After you've done this, open a new shell.**
+First, if this is not a fresh machine, [prepare your system](docs/preparing-your-system.md). You must follow these steps if you have an existing Homebrew installation, Ruby or Node.js version managers, or custom dotfiles in your home directory. **After you've done this, open a new shell.**
 
 Install Babushka:
 
@@ -63,17 +63,17 @@ babushka "icelab:workstation"
 
 ## What it sets up
 
-These Babushka deps are nothing magical. They are merely a collection of jobs that bring your system environment up to a known state by installing things and running shell commands.
+These Babushka deps aren't magic. They're merely a collection of jobs that bring your system environment to a known state by installing things and running shell commands.
 
-The resulting environment, therefore, is nothing special. It is a vanilla OS X web development environment. You should endeavour, therefore, to understand and learn the tools that are installed, so you can work with them directly after they are in place.
+This means the resulting environment isn't all that special; it's a vanilla macOS web development environment. You should endeavour to understand and learn the tools that are installed so you can work with them directly after they are in place.
 
 ### Your environment
 
-[Zsh](http://www.zsh.org) is your default shell, and the [Icelab dotfiles](https://github.com/icelab/dotfiles) provide a common baseline shell environment. These are managed using [rcm](http://thoughtbot.github.io/rcm/) and can be combined with another dotfiles directory for personal customization. See the [README](https://github.com/icelab/dotfiles) for more information.
+[Zsh](http://www.zsh.org) is your default shell, and the [Icelab dotfiles](https://github.com/icelab/dotfiles) provide a common shell environment. These are managed using [rcm](http://thoughtbot.github.io/rcm/) and can be combined with another dotfiles directory for personal customization. See the [README](https://github.com/icelab/dotfiles) for more information.
 
 [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build) manage and install your Ruby versions. The most recent stable Ruby version is your default.
 
-[nodenv](https://github.com/OiNutter/nodenv) and [node-build](https://github.com/OiNutter/node-build) for managing and installing Node.js versions. The most recent stable Node.js version is your default.
+[nodenv](https://github.com/nodenv/nodenv) and [node-build](https://github.com/nodenv/node-build) for managing and installing Node.js versions. The most recent stable Node.js version is your default.
 
 ### Your system
 
@@ -94,7 +94,7 @@ These utilities are also installed:
 * [Heroku CLI](https://github.com/heroku/heroku) for working with [Heroku](http://heroku.com) apps
 * [ImageMagick](http://www.imagemagick.org) image processing utilities
 * [PhantomJS](http://phantomjs.org) headless web browser, for web app integration testing
-* [Raygun](https://github.com/carbonfive/raygun) for generating new apps using Icelab's [rails-skeleton](https://github.com/icelab/rails-skeleton)
+* [Raygun](https://github.com/carbonfive/raygun) for generating new appss
 * Plus various helpful Unix utilities, including `watch(1)`
 
 ## Enable development for particular Icelab projects
@@ -109,26 +109,6 @@ Activating the development environment for a project does the following:
 
 1. Checks the project out into `~/src/<project_name>`
 2. If specified, the project's own Babushka dep is run, making whatever changes are necessary to enable development on the project. This dep will be available in the `babushka-deps/` directory at the top-level of the project's codebase.
-
-## Enable experimental features
-
-These deps ship with a few experimental features not yet part of the standard workstation environment.
-
-### Buildkite agent
-
-Run the agent for [Buildkite](https://buildkite.com) builds on your machine:
-
-```
-babushka "icelab:buildkite-agent"
-```
-
-### Docker on OS X, via Dinghy
-
-Run apps on your machine using [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/).
-
-```
-babushka "icelab:docker"
-```
 
 ## Customize your environment with Babushka
 

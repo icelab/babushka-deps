@@ -4,20 +4,6 @@ The easiest way to make sure your system accepts the development environment is 
 
 Before you follow any of these instructions, _understand what they are doing_. They will remove things from your system. If there is anything that you want to record about the state of your system (e.g. a list of installed Homebrew packages or Ruby gems), do this now.
 
-## Remove Boxen
-
-If you're replacing a [Boxen](https://boxen.github.com)-managed environment, remove Boxen first.
-
-Before you do this, consider what you want to do with your your database content and other locally-unique content. If it's important for you to keep these, move them aside first. They're installed at `/opt/boxen/data`. Once things are installed with Babushka, you might be able move this data back into place (e.g. by putting what was in `/opt/boxen/data/postgresql` into `/usr/local/var/postgresql`). The alternative to manually moving around your data files like this is to do nothing and then just freshly re-populate the databases for whatever apps you're working on. Your call.
-
-Once you've considered and acted on this, remove Boxen:
-
-```sh
-rm -rf /opt/boxen
-```
-
-Then to keep things clean, remove the boxen initialization hook. Look for `[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh`  in your shell config and delete it.
-
 ## Move aside conflicting dotfiles
 
 Some [shared dotfiles](https://github.com/icelab/dotfiles) will be installed. Move yours aside to let these come into place.

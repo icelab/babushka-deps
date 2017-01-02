@@ -1,12 +1,6 @@
-dep "nodenv" do
-  requires "repository".with  :path => "~/.nodenv",
-                              :url => "https://github.com/OiNutter/nodenv.git",
-                              :branch => "master"
+dep "nodenv", :template => "managed"
 
-  requires "repository".with  :path => "~/.nodenv/plugins/node-build",
-                              :url => "https://github.com/OiNutter/node-build.git",
-                              :branch => "master"
-end
+dep "node-build", :template => "managed"
 
 meta :nodenv do
   accepts_value_for :version, :basename

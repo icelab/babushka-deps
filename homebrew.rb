@@ -29,5 +29,5 @@ end
 # from core. We may need to track this for a little while in case the
 # continued development moves elsewhere.
 dep "homebrew services" do
-  requires "homebrew tap".with "gapple/services"
+  requires "homebrew tap".with "homebrew/services"
 end

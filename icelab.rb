@@ -35,6 +35,8 @@ dep "workstation" do
 
   requires "homebrew services"
 
+  requires "elasticsearch.managed"
+
   requires "memcached.managed"
   requires "memcached.launchctl"
 

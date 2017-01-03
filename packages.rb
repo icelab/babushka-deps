@@ -1,5 +1,9 @@
 # Managed services
 
+dep "elasticsearch.managed" do
+  requires "java.cask"
+end
+
 dep "memcached.managed"
 dep "memcached.launchctl"
 
@@ -60,6 +64,8 @@ end
 dep "imagemagick.managed" do
   provides %w(compare animate convert composite conjure import identify stream display montage mogrify)
 end
+
+dep "java.cask"
 
 dep "phantomjs.managed"
 

@@ -57,6 +57,8 @@ dep "elasticsearch.launchctl"
 
 # Managed packages
 
+dep "docker.cask"
+
 dep "heroku.managed" do
   provides "heroku"
 end

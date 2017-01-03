@@ -50,6 +50,7 @@ dep "workstation" do
   requires "redis.launchctl"
 
   # General homebrew packages
+  requires "docker.cask"
   requires "imagemagick.managed"
   requires "watch.managed"
   requires "heroku.managed"

@@ -53,11 +53,6 @@ dep "elasticsearch.launchctl"
 
 # Managed packages
 
-dep "apple-gcc42.managed" do # For building older rubies
-  requires "homebrew tap".with "homebrew/dupes"
-  provides "gcc-4.2"
-end
-
 dep "heroku.managed" do
   provides "heroku"
 end

@@ -47,24 +47,6 @@ dep "global ruby version", :version do
   }
 end
 
-dep "ruby ree-1.8.7-2012.01", :template => "icelab:rbenv" do
-  requires "apple-gcc42.managed" # For rubies older than 1.9.3-p125
-
-  version "ree-1.8.7-2012.01"
-
-  # Some tricks for compiling on Yosemite. See https://github.com/sstephenson/ruby-build/issues/654
-  build_env_vars "CC=/usr/bin/gcc-4.2 MACOSX_DEPLOYMENT_TARGET=10.9"
-end
-
-dep "ruby ree-1.8.7-2012.02", :template => "icelab:rbenv" do
-  requires "apple-gcc42.managed" # For rubies older than 1.9.3-p125
-
-  version "ree-1.8.7-2012.02"
-
-  # Some tricks for compiling on Yosemite. See https://github.com/sstephenson/ruby-build/issues/654
-  build_env_vars "CC=/usr/bin/gcc-4.2 MACOSX_DEPLOYMENT_TARGET=10.9"
-end
-
 ### Ruby versions
 
 dep "ruby 1.9.3-p448", :template => "rbenv" do

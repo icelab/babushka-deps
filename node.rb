@@ -2,6 +2,8 @@ dep "nodenv", :template => "managed"
 
 dep "node-build", :template => "managed"
 
+dep "yarn", :template => "managed"
+
 meta :nodenv do
   accepts_value_for :version, :basename
 
@@ -22,16 +24,8 @@ meta :nodenv do
   }
 end
 
-dep "node 0.10.33", :template => "nodenv" do
-  version "0.10.33"
-end
-
-dep "node 4.4.7", :template => "nodenv" do
-  version "4.4.7"
-end
-
-dep "node 6.2.2", :template => "nodenv" do
-  version "6.2.2"
+dep "node 6.10.0", :template => "nodenv" do
+  version "6.10.0"
 end
 
 dep "global node version", :version do

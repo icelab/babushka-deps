@@ -55,6 +55,7 @@ dep "workstation" do
   requires "watch.managed"
   requires "heroku.managed"
   requires "phantomjs.managed"
+  requires "yarn"
 
   # Ruby
   requires "ruby 2.4.0"
@@ -65,10 +66,8 @@ dep "workstation" do
   requires "raygun.gem"
 
   # Node
-  requires "node 0.10.33"
-  requires "node 4.4.7"
-  requires "node 6.2.2"
-  requires "global node version".with "4.4.7"
+  requires "node 6.10.0"
+  requires "global node version".with "6.10.0"
 
   # Global node packages
   requires "coffee-script.npm"

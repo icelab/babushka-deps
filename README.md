@@ -16,7 +16,6 @@ First, if this is not a fresh machine, [prepare your system](docs/preparing-your
 Install Babushka:
 
 ```sh
-BABUSHKA_REPO=https://github.com/icelab/babushka.git \
 sh -c "`curl https://babushka.me/up`"
 ```
 

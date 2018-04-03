@@ -40,12 +40,6 @@ After this has completed, _**open a new shell**_ and then finish applying the re
 babushka "icelab:workstation"
 ```
 
-Finally, enable our private dep source for cloning and setting up Icelab projects (you can skip this if you're a public user these Babuhska deps):
-
-```sh
-babushka "icelab:projects"
-```
-
 ### Updates
 
 To update your environment, first update the Babushka sources:
@@ -95,19 +89,6 @@ These utilities are also installed:
 * [PhantomJS](http://phantomjs.org) headless web browser, for web app integration testing
 * [Raygun](https://github.com/carbonfive/raygun) for generating new appss
 * Plus various helpful Unix utilities, including `watch(1)`
-
-## Enable development for particular Icelab projects
-
-As part of this set up, a (private) "projects" Babushka source is installed in `~/.babushka/sources/projects`. This source contains deps to check out various Icelab projects.
-
-To see the available projects, run `babushka list projects` and look for the names under the "# projects (remote)" heading.
-
-To activate the development environment for any one of our projects, run `babushka projects:<project_name>`, replacing the name with anything you saw in the `babushka list` output.
-
-Activating the development environment for a project does the following:
-
-1. Checks the project out into `~/src/<project_name>`
-2. If specified, the project's own Babushka dep is run, making whatever changes are necessary to enable development on the project. This dep will be available in the `babushka-deps/` directory at the top-level of the project's codebase.
 
 ## Customize your environment with Babushka
 

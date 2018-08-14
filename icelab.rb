@@ -55,8 +55,8 @@ dep "workstation" do
   requires "yarn"
 
   # Ruby
-  # requires "ruby 2.4.0"
-  # requires "global ruby version".with "2.4.0"
+  requires "ruby 2.5.1"
+  requires "global ruby version".with "2.5.1"
 
   # Global gems
   # requires "git-smart.gem"

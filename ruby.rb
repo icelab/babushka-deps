@@ -96,3 +96,7 @@ end
 dep "ruby 2.4.0", :template => "rbenv" do
   version "2.4.0"
 end
+
+dep "ruby 2.5.1", :template => "rbenv" do
+  version "2.5.1"
+end

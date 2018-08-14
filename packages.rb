@@ -74,17 +74,6 @@ dep "phantomjs.managed"
 dep "rcm.managed" do
   requires_when_unmet "homebrew tap".with "thoughtbot/formulae"
   provides "rcup"
-
-  met? {
-    # Adjust `met?` block to skip checking package installation and simply look
-    # for the executable in the path. This allows other users of these deps to
-    # choose to install rcm from source.
-    #
-    # The reason to add this is because rcm has a very slow release cycle, and
-    # (as of 2017-07-22), there are some helpful bugfixes around hamdling file
-    # names with spaces that exist only in git master.
-    in_path?(provides)
-  }
 end
 
 dep "watch.managed"

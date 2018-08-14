@@ -44,7 +44,6 @@ dep "workstation" do
 
   requires "postgresql.managed"
   requires "postgresql.launchctl"
-  requires "postgres fixed for yosemite"
 
   requires "redis.managed"
   requires "redis.launchctl"

@@ -74,10 +74,7 @@ dep "phantomjs.managed"
 dep "rcm.managed" do
   # Add custom `met?` condition because the usual "brew info rcm" check will
   # fail here with 'Error: no available formula with the name "rcm"'
-  met? {
-    in_path? "rcm"
-  }
-
+  met? { in_path? "rcup" }
   requires_when_unmet "homebrew tap".with "thoughtbot/formulae"
   provides "rcup"
 end

@@ -1,5 +1,5 @@
 dep "homebrew cask" do
-  requires "icelab:homebrew tap".with "caskroom/cask"
+  # Nothing extra is required for homebrew cask to work
 end
 
 meta :cask do

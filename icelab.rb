@@ -40,6 +40,7 @@ dep "workstation" do
   # requires "heroku.managed"
   requires "overmind.managed"
   requires "phantomjs.managed"
+  requires "tmux.managed"
   requires "yarn"
 
   # Ruby

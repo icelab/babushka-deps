@@ -20,6 +20,8 @@ dep "rcm.managed" do
   provides "rcup"
 end
 
+dep "tmux.managed"
+
 # Gems
 
 dep "git-smart.gem" do

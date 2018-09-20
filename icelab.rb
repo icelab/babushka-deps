@@ -33,18 +33,6 @@ end
 dep "workstation" do
   requires "workstation bootstrapped"
 
-  # Disable installation of system services while we evaluate asdf
-
-  # requires "homebrew services"
-  # requires "elasticsearch.managed"
-  # requires "memcached.managed"
-  # requires "memcached.launchctl"
-  # requires "mysql"
-  # requires "postgresql.managed"
-  # requires "postgresql.launchctl"
-  # requires "redis.managed"
-  # requires "redis.launchctl"
-
   # General homebrew packages
   requires "docker.cask"
   requires "imagemagick.managed"

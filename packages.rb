@@ -20,8 +20,6 @@ dep "rcm.managed" do
   provides "rcup"
 end
 
-dep "watch.managed"
-
 # Gems
 
 dep "git-smart.gem" do

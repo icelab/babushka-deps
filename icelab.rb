@@ -36,7 +36,6 @@ dep "workstation" do
   # General homebrew packages
   requires "docker.cask"
   requires "imagemagick.managed"
-  requires "watch.managed"
   # Disable heroku until
   # requires "heroku.managed"
   requires "phantomjs.managed"

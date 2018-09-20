@@ -8,6 +8,7 @@ dep "imagemagick.managed" do
   provides %w(compare animate convert composite conjure import identify stream display montage mogrify)
 end
 
+dep "overmind.managed"
 
 dep "phantomjs.managed"
 

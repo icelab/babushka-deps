@@ -38,6 +38,7 @@ dep "workstation" do
   requires "imagemagick.managed"
   # Disable heroku until
   # requires "heroku.managed"
+  requires "overmind.managed"
   requires "phantomjs.managed"
   requires "yarn"
 

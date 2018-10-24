@@ -10,7 +10,7 @@ end
 
 dep "overmind.managed"
 
-dep "phantomjs.managed"
+#dep "phantomjs.managed"
 
 dep "rcm.managed" do
   # Add custom `met?` condition because the usual "brew info rcm" check will

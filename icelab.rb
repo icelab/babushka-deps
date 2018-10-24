@@ -39,7 +39,7 @@ dep "workstation" do
   # Disable heroku until
   # requires "heroku.managed"
   requires "overmind.managed"
-  requires "phantomjs.managed"
+  #requires "phantomjs.managed"
   requires "tmux.managed"
   requires "yarn"
 
